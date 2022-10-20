@@ -4,9 +4,9 @@ pipeline {
   stage("working with conditions"){
    steps {
     script {
-    val1 = 10
-    val2 = 20
-    if (val1 > val2) {
+    val1=input message: 'Enter val1 value', parameters: [string(defaultValue: '10', name: 'val1', trim: true)]
+    val12=input message: 'Enter val2 value', parameters: [string(defaultValue: '20', name: 'val2', trim: true)]
+    if (val1.toInteger() > val2.toInteger()) {
      println "val1 is big ${val1}"
     }
     else {
