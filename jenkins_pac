@@ -4,9 +4,13 @@ pipeline {
   stage("working with loops"){
    steps {
     script {
-     mydata=[10,202,30]
+     mydata = [10,20,30]
      for(i in mydata) {
       println "my list values are ${i}"
+     }
+     for(j=1;j<=10;j++)
+     {
+      println "my j value is ${j}"
      }
     }
    }
