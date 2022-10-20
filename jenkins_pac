@@ -1,12 +1,12 @@
 pipeline {
-agent any
- stages{
+ agent any
+ stages {
   stage("working with conditions"){
    steps {
     script {
     val1 = 10
     val2 = 20
-    if (val > val2) {
+    if (val1 > val2) {
      println "val1 is big ${val1}"
     }
     else {
