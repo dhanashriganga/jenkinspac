@@ -1,22 +1,17 @@
 pipeline {
- agent any
- environment {
-  JAVA_HOME = "/usr/bin/java11"
-  Batchno = "2"
-}
-parameters {
-  choice choices: ['dev', 'sit', 'pre prod', 'prod'], name: 'ENV'
-}
+agent any
  stages{
-  stage("working with variables"){
+  stage("working with conditions"){
    steps {
     script {
-      var1=20
-      println "my var1 is ${var1}"
-      println "my current build is ${currentBuild.number}"
-      println "my environment section java home value is ${env.JAVA_HOME}"
-      println "my environment section Batchno value is ${env.Batchno}"
-      println "my selected env  value is ${params.ENV}"
+    val1 = 10
+    val2 = 20
+    if (val > val2) {
+     println "val1 is big ${val1}"
+    }
+    else {
+     println "val2 is big ${val2}"
+     }
     }
    }
   }
