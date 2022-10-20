@@ -1,0 +1,12 @@
+pipeline {
+  agent any
+  stages("jenkins pac"){
+   steps{
+    script{
+    sh """
+    echo "Hi all welcome to jankins Pac"
+    """
+    }
+   }
+  }
+}
