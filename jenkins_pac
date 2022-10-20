@@ -1,4 +1,4 @@
-def welcomenote(int a, int b) {
+def welcomenote(int a=20, int b=30) {
  println "welcome"
  return(a+b)
 }
@@ -9,10 +9,9 @@ pipeline {
   stage("working with functions"){
    steps {
     script {
+     println welcomenote()
      result=welcomenote(10,20)
      println "my result is ${result}"
     }
    }
   }
- }
-}
