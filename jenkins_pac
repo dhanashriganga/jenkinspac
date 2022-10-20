@@ -15,7 +15,7 @@ pipeline {
      k=1
      while(k<=10){
       println "my k value is ${k}"
-      i++
+      k++
      }
     }
    }
