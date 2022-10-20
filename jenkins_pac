@@ -1,16 +1,12 @@
 pipeline {
  agent any
  stages {
-  stage("working with conditions"){
+  stage("working with loops"){
    steps {
     script {
-    val1 = input message: 'Enter val1 value', parameters: [string(defaultValue: '10', name: 'val1', trim: true)]
-    val2 = input message: 'Enter val2 value', parameters: [string(defaultValue: '20', name: 'val2', trim: true)]
-    if (val1.toInteger() > val2.toInteger()) {
-     println "val1 is big ${val1}"
-    }
-    else {
-     println "val2 is big ${val2}"
+     mydata=[10,202,30]
+     for(i in mydata) {
+      println "my list values are ${i}"
      }
     }
    }
