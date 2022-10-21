@@ -6,7 +6,10 @@ pipeline {
     script {
     File myfile = new File("/tmp/mydata.txt")
     println "my content is ${myfile.text}"
-         }
+    println "Reading data line by line"
+    for(line in myfile.readLines()){
+    println "${line}"
+    }     }
    }
   }
  }
