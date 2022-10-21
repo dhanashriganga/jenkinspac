@@ -9,7 +9,11 @@ pipeline {
     println "Reading data line by line"
     for(line in myfile.readLines()){
     println "${line}"
-    }     }
+    }   
+    myfile.append("\n Hi I am line4\n") 
+    myfile.append("\n Hi I am line5\n") 
+    println "my new content is ${myfile.text}"
+    }
    }
   }
  }
